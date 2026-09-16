@@ -3,83 +3,407 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#b7ff3c">
+<meta name="theme-color" content="#11130f">
+<meta name="description" content="flip&co — Abbigliamento uomo, donna e bambino a Cagliari. Brand selezionati, esperienza dal 1986.">
 <title>flip&co — Abbigliamento Uomo, Donna e Bambino a Cagliari</title>
-<meta name="description" content="flip&co: abbigliamento uomo, donna e bambino a Cagliari. Brand selezionati, esperienza dal 1986 e negozio in Via Italia 22.">
 <style>
-:root{--paper:#f5f4ee;--ink:#10120e;--muted:#686d64;--acid:#b7ff3c;--dark:#0b0d0a;--line:#d4d6cc;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
-a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}.mono{font:10px "Courier New",monospace;letter-spacing:1.7px;text-transform:uppercase;color:#777c73}
-.nav{position:fixed;inset:0 0 auto;height:74px;background:rgba(245,244,238,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);z-index:1000}.navin{height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand img{width:145px}.navlinks{display:flex;gap:23px;font:10px "Courier New";text-transform:uppercase;letter-spacing:1px;color:#656a61}.navright{display:flex;align-items:center;gap:9px}.lang{border:1px solid #c5c8bf;border-radius:999px;padding:3px;display:flex}.lang button{border:0;background:none;border-radius:999px;padding:7px 9px;font:9px "Courier New";cursor:pointer;color:#777}.lang button.active{background:var(--dark);color:var(--acid)}
-.menuBtn{width:38px;height:38px;border:1px solid #c5c8bf;border-radius:50%;background:none;display:grid;place-items:center;cursor:pointer}.menuBtn span,.menuBtn span:before,.menuBtn span:after{display:block;width:15px;height:1px;background:var(--ink);content:"";position:relative}.menuBtn span:before{position:absolute;top:-5px}.menuBtn span:after{position:absolute;top:5px}
-.mega{position:fixed;inset:74px 0 0;background:rgba(245,244,238,.98);z-index:900;display:none;overflow:auto}.mega.open{display:block}.megaGrid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;padding:70px 0}.mega h2{font-size:clamp(48px,7vw,92px);line-height:.84;letter-spacing:-.07em;margin:15px 0}.mega h2 em{font-style:normal;color:#8fbd20}.mega p{max-width:410px;color:var(--muted);font-size:15px;line-height:1.7}.megaLinks{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}.megaLinks a{padding:22px 0;border-bottom:1px solid var(--line);font-size:23px}.megaLinks span{font:9px "Courier New";color:#8a8f86;margin-right:15px}
+:root{
+  --paper:#f7f6f1;--ink:#10120e;--muted:#666b63;--line:#d8d9d2;
+  --dark:#10130f;--acid:#b8ff38;--white:#fff;--max:1280px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+.mono{font:10px "Courier New",monospace;letter-spacing:2px;text-transform:uppercase}
+.small{font-size:13px;line-height:1.7;color:var(--muted)}
+button{font:inherit}
 
-.hero{padding:145px 0 85px;min-height:88vh;display:flex;align-items:end;border-bottom:1px solid var(--line);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:55vw;height:55vw;right:-28vw;top:8vh;border-radius:50%;background:var(--acid);filter:blur(120px);opacity:.4}.heroGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;position:relative;z-index:2;width:100%}.hero h1{font-size:clamp(64px,10vw,142px);line-height:.82;letter-spacing:-.075em;margin:18px 0 30px}.hero h1 em,.sectionTitle em,.dark h2 em,.cta h2 em{font-style:normal;color:#8dbb1e}.lead{max-width:620px;font-size:19px;line-height:1.65;color:#50554d}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #aeb2a8;border-radius:999px;padding:13px 18px;font:10px "Courier New";letter-spacing:1px;text-transform:uppercase}.btn.primary{background:var(--dark);color:var(--paper);border-color:var(--dark)}.btn.primary:hover{background:var(--acid);color:var(--ink)}.heroSide{align-self:end;border-top:1px solid #bfc2b8;padding-top:20px}.heroSide strong{display:block;font-size:25px;line-height:1.08;margin-bottom:12px}.heroSide p{color:var(--muted);font-size:13px;line-height:1.7}.heroImage{margin-top:28px;border-radius:2px;overflow:hidden;aspect-ratio:4/3;background:url("assets/store-1.webp") center/cover no-repeat}
-.ticker{border-bottom:1px solid var(--line);padding:14px 0;overflow:hidden;white-space:nowrap;font:10px "Courier New";letter-spacing:2px;color:#73786f}.section{padding:105px 0;border-bottom:1px solid var(--line)}.sectionHead{display:grid;grid-template-columns:1fr .65fr;gap:60px;align-items:end;margin-bottom:55px}.sectionTitle{font-size:clamp(46px,6.4vw,86px);line-height:.88;letter-spacing:-.07em;margin:12px 0}.sectionLead{font-size:17px;line-height:1.7;color:var(--muted);max-width:510px}
-.categoryGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}.category{min-height:420px;background:var(--dark);color:#fff;position:relative;overflow:hidden;padding:28px;display:flex;align-items:end}.category:before{content:"";position:absolute;inset:0;background-position:center;background-size:cover;opacity:.62;transition:transform .4s ease}.category:hover:before{transform:scale(1.025}.category.man:before{background-image:url("assets/store-2.webp")}.category.woman:before{background-image:url("assets/store-3.webp")}.category.kids:before{background-image:url("assets/campaign-1.png")}.category:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.72))}.categoryContent{position:relative;z-index:2}.category h3{font-size:54px;line-height:.88;letter-spacing:-.06em;margin:10px 0}.category p{font-size:15px;color:#ddd;margin:0 0 18px}.category .btn{color:#fff;border-color:#fff}
-.darkSection{background:var(--dark);color:#f3f4ee}.manifesto{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px}.manifesto h2{font-size:clamp(48px,6.5vw,92px);line-height:.86;letter-spacing:-.07em;margin:0}.manifesto p{font-size:21px;line-height:1.5;color:#b1b6ad;max-width:690px}.manifesto strong{color:#f3f4ee}.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#30352d;margin-top:70px}.principle{background:var(--dark);padding:30px;min-height:190px}.principle b{font-size:15px}.principle p{font-size:13px;line-height:1.6;color:#92988f;margin-top:25px}
-.brandIntro{display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:end}.brandGrid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.brand-cell{min-height:105px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:14px;font-weight:700;font-size:14px}
-.experience{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:stretch}.experienceImage{min-height:500px;background:url("assets/store-2.webp") center/cover no-repeat}.experienceText{display:flex;flex-direction:column;justify-content:center}.experienceText h2{font-size:clamp(50px,6vw,80px);line-height:.88;letter-spacing:-.07em;margin:12px 0}.experienceText p{font-size:17px;line-height:1.7;color:var(--muted)}
-.reputation{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px;align-items:start}.rating{font-size:86px;font-weight:800;letter-spacing:-.07em;line-height:.8}.stars{font-size:25px;letter-spacing:4px;margin:18px 0}.reputationCard{background:var(--dark);color:#f3f4ee;padding:42px}.reputationCard h3{font-size:42px;line-height:.9;letter-spacing:-.06em;margin:15px 0}.reputationCard p{color:#a9afa6;line-height:1.7}.reputationCard .btn{color:#fff;border-color:#fff;margin-top:20px}
-.contactBand{background:var(--acid);padding:90px 0}.contactGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:end}.contactBand h2{font-size:clamp(60px,8vw,115px);line-height:.82;letter-spacing:-.075em;margin:15px 0}.contactList{border-top:1px solid rgba(16,18,14,.25)}.contactItem{padding:20px 0;border-bottom:1px solid rgba(16,18,14,.25);display:flex;justify-content:space-between;gap:20px}.contactItem b{font-size:14px}.contactItem span{text-align:right;color:#3c4734;font-size:14px}
-footer{background:var(--dark);color:#eee;border-top:1px solid #292d26;padding:45px 0}.foot{display:grid;grid-template-columns:1.5fr .7fr 1fr;gap:40px;align-items:end}.foot img{width:145px;filter:brightness(0) invert(1)}.foot small,.legal{display:block;color:#777d73;font:9px/1.8 "Courier New"}.footSocial a{display:block;font-size:17px;margin-top:12px}.footSocial a:hover{color:var(--acid)}
-@media(max-width:1000px){.navlinks{display:none}.heroGrid,.sectionHead,.manifesto,.brandIntro,.experience,.reputation,.contactGrid{grid-template-columns:1fr;gap:35px}.principles{grid-template-columns:repeat(2,1fr)}.categoryGrid{grid-template-columns:1fr}.brandGrid{grid-template-columns:repeat(2,1fr)}.megaGrid{grid-template-columns:1fr}}
-@media(max-width:620px){.wrap{width:calc(100% - 28px)}.nav{height:66px}.brand img{width:125px}.mega{inset:66px 0 0}.megaGrid{padding:45px 0}.megaLinks{grid-template-columns:1fr}.hero{padding:110px 0 65px;min-height:auto}.hero h1{font-size:clamp(53px,16vw,72px)}.lead{font-size:16px}.actions{display:grid;grid-template-columns:1fr}.actions .btn{width:100%}.section{padding:75px 0}.sectionHead{margin-bottom:35px}.sectionTitle{font-size:clamp(43px,13vw,62px)}.sectionLead{font-size:15px}.principles{grid-template-columns:1fr;margin-top:40px}.category{min-height:330px}.category h3{font-size:48px}.brand-cell{min-height:82px;font-size:12px}.experienceImage{min-height:360px}.reputation{gap:30px}.rating{font-size:70px}.reputationCard{padding:28px}.contactBand{padding:70px 0}.contactBand h2{font-size:clamp(58px,17vw,78px)}.contactItem{display:block}.contactItem span{display:block;text-align:left;margin-top:7px}.foot{grid-template-columns:1fr}}
+/* HEADER */
+.nav{position:fixed;top:0;left:0;right:0;height:76px;z-index:1000;background:rgba(247,246,241,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(16,18,14,.12)}
+.navin{height:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.navlogo{justify-self:start;width:92px;height:48px;overflow:hidden;display:flex;align-items:center}
+.navlogo img{width:100%;height:auto;mix-blend-mode:multiply}
+.navcenter{display:flex;gap:24px;justify-content:center}
+.navcenter a{font:10px "Courier New";letter-spacing:1.5px;text-transform:uppercase;color:#5e635b}
+.navright{justify-self:end;display:flex;align-items:center;gap:9px}
+.wa{display:inline-flex;align-items:center;gap:8px;border:1px solid #b9bcb3;border-radius:999px;padding:10px 14px;font:10px "Courier New";letter-spacing:1px;text-transform:uppercase;background:var(--white)}
+.lang{display:flex;border:1px solid #b9bcb3;border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;border-radius:999px;padding:6px 8px;font:9px "Courier New";cursor:pointer;color:#777}
+.lang button.active{background:var(--dark);color:var(--acid)}
+.menu{width:40px;height:40px;border:1px solid #b9bcb3;border-radius:50%;background:transparent;cursor:pointer;display:grid;place-items:center}
+.menu i,.menu i:before,.menu i:after{display:block;width:15px;height:1px;background:var(--ink);content:"";position:relative}
+.menu i:before{position:absolute;top:-5px}.menu i:after{position:absolute;top:5px}
+
+.overlay{position:fixed;inset:76px 0 0;background:rgba(247,246,241,.98);z-index:900;display:none;overflow:auto}
+.overlay.open{display:block}
+.overlayGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;padding:72px 0}
+.overlay h2{font-size:clamp(58px,8vw,110px);line-height:.82;letter-spacing:-.075em;margin:18px 0}
+.overlay h2 em{font-style:normal;color:#89b81f}
+.overlay p{max-width:430px;color:var(--muted);line-height:1.7}
+.menuLinks{border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
+.menuLinks a{padding:24px 0;border-bottom:1px solid var(--line);font-size:24px}
+.menuLinks span{font:9px "Courier New";color:#858a81;margin-right:15px}
+
+/* HERO */
+.hero{padding:76px 0 0;background:var(--dark);color:var(--white)}
+.heroImage{position:relative;min-height:calc(100vh - 76px);overflow:hidden}
+.heroImage>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.heroImage:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.42))}
+.heroOverlay{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:42px clamp(24px,5vw,76px)}
+.heroLogo{width:min(340px,50vw);filter:brightness(0) invert(1);mix-blend-mode:screen}
+.heroTop{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.heroTop .mono{color:#fff;opacity:.85}
+.heroText{max-width:950px}
+.kicker{display:inline-block;background:var(--acid);color:var(--ink);padding:8px 11px;font:10px "Courier New";letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-size:clamp(56px,9.6vw,148px);line-height:.79;letter-spacing:-.085em;margin:0}
+.hero h1 em{font-style:normal;color:var(--acid)}
+.heroBottom{display:flex;justify-content:space-between;align-items:end;gap:30px}
+.heroBottom p{max-width:430px;font-size:16px;line-height:1.55;margin:0;color:rgba(255,255,255,.86)}
+.scrollCue{font:10px "Courier New";letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
+
+/* GENERAL */
+.ticker{background:var(--acid);color:var(--ink);padding:14px 0;border-bottom:1px solid var(--ink);overflow:hidden;white-space:nowrap;font:10px "Courier New";letter-spacing:2.2px}
+.section{padding:112px 0;border-bottom:1px solid var(--line)}
+.sectionHead{display:grid;grid-template-columns:1fr .7fr;gap:70px;align-items:end;margin-bottom:58px}
+.sectionTitle{font-size:clamp(52px,7vw,96px);line-height:.84;letter-spacing:-.08em;margin:14px 0}
+.sectionTitle em{font-style:normal;color:#8ab91f}
+.sectionLead{font-size:17px;line-height:1.7;color:var(--muted);max-width:530px}
+
+/* LOOKBOOK */
+.lookbook{display:grid;grid-template-columns:1.05fr .95fr;gap:12px}
+.lookbookMain{position:relative;min-height:720px;overflow:hidden;background:#111}
+.lookbookMain img{width:100%;height:100%;object-fit:cover}
+.lookbookMain .caption{position:absolute;left:30px;bottom:28px;color:#fff;z-index:2}
+.caption strong{display:block;font-size:44px;line-height:.88;letter-spacing:-.06em}
+.caption span{display:block;margin-top:10px;font:10px "Courier New";letter-spacing:1.5px}
+.lookbookSide{display:grid;grid-template-rows:1fr 1fr;gap:12px}
+.lookCard{position:relative;min-height:354px;overflow:hidden;background:#111}
+.lookCard img{width:100%;height:100%;object-fit:cover}
+.lookCard:after,.lookbookMain:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(0,0,0,.6))}
+.lookCard .caption{position:absolute;z-index:2;left:24px;bottom:22px;color:#fff}
+
+/* CATEGORIES */
+.categoryGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.category{position:relative;min-height:520px;background:var(--dark);color:#fff;overflow:hidden}
+.category img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.category:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.78))}
+.category:hover img{transform:scale(1.025)}
+.categoryContent{position:absolute;z-index:2;left:28px;right:28px;bottom:28px}
+.categoryContent .mono{color:#fff;opacity:.8}
+.category h3{font-size:62px;line-height:.82;letter-spacing:-.07em;margin:12px 0 8px}
+.category p{font-size:14px;color:#ddd;margin:0}
+
+/* MANIFESTO */
+.darkSection{background:var(--dark);color:#f5f6f0}
+.manifesto{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px}
+.manifesto h2{font-size:clamp(52px,7vw,100px);line-height:.82;letter-spacing:-.08em;margin:0}
+.manifesto h2 em{font-style:normal;color:var(--acid)}
+.manifestoLead{font-size:24px;line-height:1.45;color:#b9beb5;max-width:700px;margin:0}
+.manifestoLead strong{color:#fff}
+.principles{display:grid;grid-template-columns:repeat(4,1fr);margin-top:78px;border-top:1px solid #343830;border-left:1px solid #343830}
+.principle{padding:27px;border-right:1px solid #343830;border-bottom:1px solid #343830;min-height:180px}
+.principle b{font-size:15px}.principle p{color:#91978e;font-size:13px;line-height:1.65;margin-top:25px}
+
+/* BRANDS */
+.brandGrid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.brand{min-height:118px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:16px;font-weight:700;letter-spacing:-.02em}
+.brand:nth-child(1),.brand:nth-child(5),.brand:nth-child(9),.brand:nth-child(13){font-family:Georgia,serif}
+.brand:nth-child(2),.brand:nth-child(6),.brand:nth-child(10),.brand:nth-child(14){font-weight:500;letter-spacing:.02em}
+
+/* STORY */
+.story{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}
+.storyImage{min-height:650px;overflow:hidden}
+.storyImage img{width:100%;height:100%;object-fit:cover}
+.storyText{background:#e9e8e0;padding:clamp(34px,5vw,70px);display:flex;flex-direction:column;justify-content:center}
+.storyText h2{font-size:clamp(52px,6.5vw,90px);line-height:.84;letter-spacing:-.08em;margin:16px 0 28px}
+.storyText h2 em{font-style:normal;color:#8ab91f}
+.storyText p{font-size:17px;line-height:1.7;color:#565b54}
+
+/* REPUTATION */
+.reputation{display:grid;grid-template-columns:.7fr 1.3fr;gap:80px}
+.rating{font-size:108px;line-height:.75;font-weight:800;letter-spacing:-.08em;margin-top:18px}
+.stars{letter-spacing:5px;font-size:24px;margin:22px 0}
+.reviewCard{background:var(--dark);color:#fff;padding:52px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}
+.reviewCard h3{font-size:48px;line-height:.9;letter-spacing:-.06em;margin:16px 0}
+.reviewCard p{max-width:630px;color:#aeb4aa;line-height:1.7}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #aeb2a8;border-radius:999px;padding:13px 18px;font:10px "Courier New";letter-spacing:1.2px;text-transform:uppercase}
+.btn.primary{background:var(--acid);color:var(--ink);border-color:var(--acid)}
+.btn.light{color:#fff;border-color:#fff}
+
+/* CONTACT */
+.contact{background:var(--acid);border-bottom:0;padding:100px 0}
+.contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:90px}
+.contact h2{font-size:clamp(70px,10vw,145px);line-height:.78;letter-spacing:-.09em;margin:16px 0}
+.contact h2 em{font-style:normal}
+.contact p{font-size:18px;line-height:1.6;max-width:520px}
+.contactList{border-top:1px solid rgba(16,18,14,.3)}
+.contactItem{padding:21px 0;border-bottom:1px solid rgba(16,18,14,.3);display:flex;justify-content:space-between;gap:20px}
+.contactItem b{font-size:13px}.contactItem span{text-align:right;font-size:14px;color:#3e4637}
+
+/* FOOTER */
+footer{background:var(--dark);color:#eee;padding:46px 0}
+.foot{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:40px;align-items:end}
+.footLogo{width:145px;filter:brightness(0) invert(1);mix-blend-mode:screen;margin-bottom:15px}
+.foot small,.legal{font:9px/1.8 "Courier New";color:#777e74;text-transform:uppercase;letter-spacing:1px}
+.footSocial a{display:block;font-size:16px;margin-top:12px}.footSocial a:hover{color:var(--acid)}
+.bottomBar{margin-top:35px;padding-top:18px;border-top:1px solid #30352d;display:flex;justify-content:space-between;gap:20px;font:9px "Courier New";color:#777e74;text-transform:uppercase}
+
+/* MOBILE */
+.mobileCta{display:none}
+@media(max-width:980px){
+  .navin{grid-template-columns:auto 1fr auto}.navcenter{display:none}
+  .wa{display:none}
+  .heroImage{min-height:calc(100vh - 66px)}.hero{padding-top:66px}
+  .heroLogo{width:240px}.heroOverlay{padding:28px}
+  .heroBottom{display:block}.scrollCue{margin-top:20px}
+  .sectionHead,.manifesto,.story,.reputation,.contactGrid{grid-template-columns:1fr;gap:35px}
+  .categoryGrid{grid-template-columns:1fr}
+  .category{min-height:430px}
+  .principles{grid-template-columns:repeat(2,1fr)}
+  .brandGrid{grid-template-columns:repeat(2,1fr)}
+  .lookbook{grid-template-columns:1fr}.lookbookMain{min-height:620px}.lookbookSide{grid-template-columns:1fr 1fr;grid-template-rows:none}.lookCard{min-height:350px}
+  .foot{grid-template-columns:1fr 1fr}.foot>div:last-child{grid-column:1/-1}
+}
+@media(max-width:620px){
+  .wrap{width:calc(100% - 28px)}
+  .nav{height:66px}.navlogo{width:82px;height:44px}.menu{width:38px;height:38px}
+  .overlay{inset:66px 0 0}.overlayGrid{padding:48px 0;grid-template-columns:1fr;gap:42px}.menuLinks{grid-template-columns:1fr}.menuLinks a{font-size:21px;padding:19px 0}
+  .hero{padding-top:66px}.heroImage{min-height:calc(92vh - 66px)}.heroOverlay{padding:22px 16px 26px}.heroLogo{width:190px}.heroTop{display:block}.heroTop .mono{margin-top:14px}.kicker{font-size:9px}.hero h1{font-size:clamp(54px,16.5vw,76px)}.heroBottom p{font-size:14px}
+  .section{padding:76px 0}.sectionHead{margin-bottom:38px}.sectionTitle{font-size:clamp(49px,14vw,68px)}.sectionLead{font-size:15px}
+  .lookbookMain{min-height:520px}.lookbookSide{grid-template-columns:1fr}.lookCard{min-height:390px}.caption strong{font-size:38px}
+  .category{min-height:390px}.category h3{font-size:55px}
+  .manifestoLead{font-size:19px}.principles{grid-template-columns:1fr;margin-top:48px}
+  .brand{min-height:88px;font-size:12px}
+  .storyImage{min-height:390px}.storyText h2{font-size:57px}
+  .rating{font-size:82px}.reviewCard{padding:30px}.reviewCard h3{font-size:40px}
+  .contact{padding:76px 0}.contact h2{font-size:clamp(67px,19vw,88px)}.contactItem{display:block}.contactItem span{display:block;text-align:left;margin-top:8px}
+  .foot{grid-template-columns:1fr}.foot>div:last-child{grid-column:auto}.bottomBar{display:block}.bottomBar span{display:block;margin-top:8px}
+  .mobileCta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:var(--dark);color:#fff;border-radius:999px;padding:5px;box-shadow:0 10px 35px rgba(0,0,0,.22)}
+  .mobileCta a{flex:1;text-align:center;padding:12px 8px;font:9px "Courier New";letter-spacing:1px;text-transform:uppercase}.mobileCta a:first-child{background:var(--acid);color:var(--ink);border-radius:999px}
+}
 </style>
 </head>
 <body>
-<nav class="nav"><div class="wrap navin"><a class="brand" href="#top"><img src="assets/logo.png" alt="flip&co"></a><div class="navlinks"><a href="#categorie">Categorie</a><a href="#brand">Brand</a><a href="#storia">Storia</a><a href="#reputazione">Reputazione</a><a href="#contatti">Contatti</a></div><div class="navright"><div class="lang"><button class="active">IT</button><button>EN</button></div><button class="menuBtn" id="menuBtn" aria-label="Menu"><span></span></button></div></div></nav>
 
-<div class="mega" id="mega"><div class="wrap megaGrid"><div><div class="mono">FLIP&CO / NAVIGATION</div><h2>Uno stile.<br><em>Tre mondi.</em></h2><p>Uomo, donna e bambino. Una selezione di brand costruita intorno alle persone, non intorno alla quantità.</p></div><div class="megaLinks"><a href="#categorie"><span>01</span>Categorie</a><a href="#brand"><span>02</span>I nostri brand</a><a href="#storia"><span>03</span>La nostra storia</a><a href="#reputazione"><span>04</span>Reputazione</a><a href="#contatti"><span>05</span>Contatti</a><a href="https://wa.me/393661087819"><span>06</span>WhatsApp</a></div></div></div>
+<header class="nav">
+  <div class="wrap navin">
+    <a class="navlogo" href="#top"><img src="assets/logo.jpg" alt="flip&co"></a>
+    <nav class="navcenter">
+      <a href="#lookbook">Lookbook</a><a href="#categorie">Categorie</a><a href="#brand">Brand</a><a href="#storia">Storia</a>
+    </nav>
+    <div class="navright">
+      <a class="wa" href="https://wa.me/393661087819" target="_blank">WhatsApp ↗</a>
+      <div class="lang"><button class="active" data-lang="it">IT</button><button data-lang="en">EN</button></div>
+      <button class="menu" id="menu" aria-label="Apri menu"><i></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <div class="wrap overlayGrid">
+    <div>
+      <div class="mono">FLIP&CO / MENU</div>
+      <h2>Più di un<br>negozio.<br><em>Un modo di essere.</em></h2>
+      <p>Uomo, donna e bambino. Una selezione costruita nel tempo, nel cuore di Cagliari.</p>
+    </div>
+    <nav class="menuLinks">
+      <a href="#lookbook"><span>01</span>Lookbook</a>
+      <a href="#categorie"><span>02</span>Categorie</a>
+      <a href="#brand"><span>03</span>I nostri brand</a>
+      <a href="#storia"><span>04</span>La nostra storia</a>
+      <a href="#reputazione"><span>05</span>Recensioni</a>
+      <a href="#contatti"><span>06</span>Contatti</a>
+      <a href="https://wa.me/393661087819" target="_blank"><span>07</span>WhatsApp ↗</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Via+Italia+22,+Cagliari" target="_blank"><span>08</span>Come arrivare ↗</a>
+    </nav>
+  </div>
+</div>
 
 <main id="top">
-<section class="hero"><div class="wrap heroGrid"><div><div class="mono">FLIP&CO · CAGLIARI · DAL 1986</div><h1>Più di un<br>negozio.<br><em>Un modo di essere.</em></h1><p class="lead">Dal 1986 selezioniamo brand di abbigliamento per uomo, donna e bambino. Qualità, stile e autenticità nel cuore di Cagliari.</p><div class="actions"><a class="btn primary" href="#brand">Scopri i brand →</a><a class="btn" href="#contatti">Vieni in negozio →</a></div></div><div class="heroSide"><div class="mono">LA NOSTRA IDEA</div><strong>La selezione prima della quantità.</strong><p>Conosciamo il settore da generazioni e scegliamo marchi che uniscono qualità, stile e personalità. Un negozio fisico deve essere un luogo in cui riconoscersi.</p><div class="heroImage"></div></div></div></section>
-<div class="ticker">UOMO · DONNA · BAMBINO · BRAND SELEZIONATI · CAGLIARI · DAL 1986 · UOMO · DONNA · BAMBINO ·</div>
+<section class="hero">
+  <div class="heroImage">
+    <img src="assets/lookbook-wide.png" alt="Flip&Co — lookbook">
+    <div class="heroOverlay">
+      <div class="heroTop">
+        <img class="heroLogo" src="assets/logo.jpg" alt="flip&co">
+        <div class="mono">Cagliari · Via Italia 22<br>Dal 1986</div>
+      </div>
+      <div class="heroText">
+        <div class="kicker">Abbigliamento uomo · donna · bambino</div>
+        <h1>Più di un<br>negozio.<br><em>Un modo di essere.</em></h1>
+      </div>
+      <div class="heroBottom">
+        <p>Brand selezionati, qualità e personalità. Dal 1986 scegliamo moda che parla alle persone, non solo alle stagioni.</p>
+        <div class="scrollCue">Scorri ↓</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section class="section" id="categorie"><div class="wrap"><div class="sectionHead"><div><div class="mono">01 / CATEGORIE</div><h2 class="sectionTitle">Tre mondi.<br><em>Un solo stile.</em></h2></div><p class="sectionLead">Una proposta pensata per accompagnare lo stile di tutta la famiglia, con una selezione che parte dai brand e arriva alle persone.</p></div><div class="categoryGrid">
-<article class="category man"><div class="categoryContent"><div class="mono" style="color:#fff">01 / UOMO</div><h3>UOMO</h3><p>Stile per ogni occasione.</p><a class="btn" href="#brand">Scopri la selezione →</a></div></article>
-<article class="category woman"><div class="categoryContent"><div class="mono" style="color:#fff">02 / DONNA</div><h3>DONNA</h3><p>Femminilità senza tempo.</p><a class="btn" href="#brand">Scopri la selezione →</a></div></article>
-<article class="category kids"><div class="categoryContent"><div class="mono" style="color:#fff">03 / BAMBINO</div><h3>BAMBINO</h3><p>Cresce con stile.</p><a class="btn" href="#brand">Scopri la selezione →</a></div></article>
-</div></div></section>
+<div class="ticker">FLIP&CO · UOMO · DONNA · BAMBINO · BRAND SELEZIONATI · CAGLIARI · DAL 1986 · FLIP&CO · UOMO · DONNA · BAMBINO ·</div>
 
-<section class="section darkSection"><div class="wrap"><div class="manifesto"><div><div class="mono">02 / FLIP&CO</div><h2>Non cerchiamo<br>un catalogo.<br><em>Cerchiamo carattere.</em></h2></div><p>La differenza sta nella selezione. <strong>Scegliamo brand che abbiano qualcosa da dire</strong>, che resistano al tempo e che possano parlare a persone diverse senza perdere identità.</p></div><div class="principles">
-<div class="principle"><b>Brand selezionati</b><p>Solo il meglio, sempre. Una selezione costruita nel tempo.</p></div><div class="principle"><b>Qualità e affidabilità</b><p>Moda che dura nel tempo e marchi riconosciuti.</p></div><div class="principle"><b>Esperienza dal 1986</b><p>Conosciamo il settore, i brand e soprattutto le persone.</p></div><div class="principle"><b>Per tutta la famiglia</b><p>Uomo, donna e bambino: tre mondi nello stesso luogo.</p></div>
-</div></div></section>
+<section class="section" id="lookbook">
+  <div class="wrap">
+    <div class="sectionHead">
+      <div><div class="mono">01 / LOOKBOOK</div><h2 class="sectionTitle">Good outfits.<br><em>Brighter days.</em></h2></div>
+      <p class="sectionLead">L'immagine di Flip&Co nasce dal negozio, dalle persone e dai look reali. Una selezione contemporanea con un carattere preciso.</p>
+    </div>
+    <div class="lookbook">
+      <article class="lookbookMain">
+        <img src="assets/lookbook-main.png" alt="Flip&Co lookbook uomo donna">
+        <div class="caption"><strong>Same street.<br>Different story.</strong><span>FLIP&CO · CAGLIARI</span></div>
+      </article>
+      <div class="lookbookSide">
+        <article class="lookCard">
+          <img src="assets/junior.png" alt="Flip&Co Junior">
+          <div class="caption"><strong>Kids<br>style.</strong><span>JUNIOR · PERSONALITÀ</span></div>
+        </article>
+        <article class="lookCard">
+          <img src="assets/store-entrance.png" alt="Ingresso Flip&Co">
+          <div class="caption"><strong>Entra.<br>Scopri.</strong><span>VIA ITALIA 22 · CAGLIARI</span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section class="section" id="brand"><div class="wrap"><div class="brandIntro"><div><div class="mono">03 / I NOSTRI BRAND</div><h2 class="sectionTitle">Grandi marchi.<br><em>Una selezione con criterio.</em></h2></div><p class="sectionLead">Collaboriamo con marchi affidabili e riconosciuti per offrire il meglio della moda contemporanea, dallo streetwear al casual, dall'eleganza al lifestyle sportivo.</p></div><div style="height:45px"></div><div class="brandGrid"><div class="brand-cell">TOMMY HILFIGER</div>
-<div class="brand-cell">Calvin Klein</div>
-<div class="brand-cell">GUESS</div>
-<div class="brand-cell">Levi&#x27;s®</div>
-<div class="brand-cell">THE NORTH FACE</div>
-<div class="brand-cell">NIKE</div>
-<div class="brand-cell">adidas</div>
-<div class="brand-cell">VANS</div>
-<div class="brand-cell">carhartt</div>
-<div class="brand-cell">new balance</div>
-<div class="brand-cell">Timberland</div>
-<div class="brand-cell">DICKIES</div>
-<div class="brand-cell">ONLY</div>
-<div class="brand-cell">JACK &amp; JONES</div>
-<div class="brand-cell">VERO MODA</div>
-<div class="brand-cell">name it</div></div></div></section>
+<section class="section" id="categorie">
+  <div class="wrap">
+    <div class="sectionHead">
+      <div><div class="mono">02 / CATEGORIE</div><h2 class="sectionTitle">Tre mondi.<br><em>Un solo stile.</em></h2></div>
+      <p class="sectionLead">Uomo, donna e bambino convivono nello stesso universo: brand, ricerca e attenzione alle persone.</p>
+    </div>
+    <div class="categoryGrid">
+      <article class="category"><img src="assets/lookbook-main.png" alt="Abbigliamento uomo e donna"><div class="categoryContent"><div class="mono">01 / UOMO</div><h3>UOMO</h3><p>Street, casual, lifestyle.</p></div></article>
+      <article class="category"><img src="assets/store-women.png" alt="Abbigliamento donna"><div class="categoryContent"><div class="mono">02 / DONNA</div><h3>DONNA</h3><p>Stile, personalità, libertà.</p></div></article>
+      <article class="category"><img src="assets/junior.png" alt="Abbigliamento bambino"><div class="categoryContent"><div class="mono">03 / BAMBINO</div><h3>BAMBINO</h3><p>Piccoli stili. Grandi storie.</p></div></article>
+    </div>
+  </div>
+</section>
 
-<section class="section" id="storia"><div class="wrap"><div class="experience"><div class="experienceImage"></div><div class="experienceText"><div class="mono">04 / DAL 1986 · CAGLIARI DAL 2011</div><h2>Esperienza<br><em>che continua.</em></h2><p>Dal 1986 conosciamo il mondo dell'abbigliamento. Dal 2011 il nostro negozio è presente a Cagliari, con una selezione attenta e un rapporto diretto con i nostri clienti.</p><p>Il negozio non è solo un punto vendita: è il luogo in cui i brand diventano persone, look e storie reali.</p></div></div></div></section>
+<section class="section darkSection">
+  <div class="wrap">
+    <div class="manifesto">
+      <div><div class="mono">03 / FILOSOFIA</div><h2>Non cerchiamo<br>un catalogo.<br><em>Cerchiamo carattere.</em></h2></div>
+      <p class="manifestoLead">La differenza sta nella selezione. <strong>Scegliamo brand che abbiano qualcosa da dire</strong>, che resistano al tempo e che possano parlare a persone diverse senza perdere identità.</p>
+    </div>
+    <div class="principles">
+      <div class="principle"><b>Brand selezionati</b><p>Una selezione costruita nel tempo, senza inseguire la quantità.</p></div>
+      <div class="principle"><b>Qualità</b><p>Marchi riconosciuti, materiali e prodotti pensati per durare.</p></div>
+      <div class="principle"><b>Esperienza dal 1986</b><p>Conosciamo il settore e sappiamo ascoltare chi entra in negozio.</p></div>
+      <div class="principle"><b>Per tutta la famiglia</b><p>Uomo, donna e bambino nello stesso luogo, con identità diverse.</p></div>
+    </div>
+  </div>
+</section>
 
-<section class="section" id="reputazione"><div class="wrap"><div class="sectionHead"><div><div class="mono">05 / LA NOSTRA REPUTAZIONE</div><h2 class="sectionTitle">Prima di venire,<br><em>conosci chi siamo.</em></h2></div><p class="sectionLead">La nostra presenza fisica a Cagliari è anche online: puoi verificare la posizione, leggere le recensioni e vedere le informazioni pubbliche del punto vendita.</p></div><div class="reputation"><div><div class="mono">GOOGLE · FLIP&CO</div><div class="stars">★★★★★</div><div class="rating">4,2</div><p class="sectionLead">Valutazione mostrata sulla scheda pubblica Google al momento dell'aggiornamento.</p></div><div class="reputationCard"><div class="mono" style="color:#b7ff3c">GOOGLE · FLIP&CO</div><h3>Vieni a conoscerci<br>di persona.</h3><p>Ci trovi in Via Italia 22, Cagliari. Apri Google Maps per controllare la posizione e ottenere le indicazioni.</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Via+Italia+22,+Cagliari" target="_blank">Apri Google Maps →</a><a class="btn" href="https://wa.me/393661087819" target="_blank" style="margin-left:8px">WhatsApp →</a></div></div></div></section>
+<section class="section" id="brand">
+  <div class="wrap">
+    <div class="sectionHead">
+      <div><div class="mono">04 / I NOSTRI BRAND</div><h2 class="sectionTitle">Grandi marchi.<br><em>Una selezione con criterio.</em></h2></div>
+      <p class="sectionLead">Dallo streetwear al casual, dal lifestyle sportivo all'eleganza: una selezione di marchi riconosciuti per costruire il tuo stile.</p>
+    </div>
+    <div class="brandGrid">
+      <div class="brand">TOMMY HILFIGER</div><div class="brand">Calvin Klein</div><div class="brand">GUESS</div><div class="brand">Levi's®</div>
+      <div class="brand">THE NORTH FACE</div><div class="brand">NIKE</div><div class="brand">adidas</div><div class="brand">VANS</div>
+      <div class="brand">carhartt</div><div class="brand">new balance</div><div class="brand">Timberland</div><div class="brand">DICKIES</div>
+      <div class="brand">ONLY</div><div class="brand">JACK &amp; JONES</div><div class="brand">VERO MODA</div><div class="brand">name it</div>
+    </div>
+  </div>
+</section>
 
-<section class="contactBand" id="contatti"><div class="wrap contactGrid"><div><div class="mono">06 / CONTATTI · FLIP&CO</div><h2>Vieni.<br><em>Conosci.</em><br>Prova.</h2><p style="max-width:480px;font-size:17px;line-height:1.65">Il modo migliore per conoscere Flip&Co è passare in negozio.</p></div><div class="contactList"><div class="contactItem"><b>Dove trovarci</b><span>Via Italia 22, Cagliari</span></div><div class="contactItem"><b>Orari</b><span>Lun — Sab · 09:00 — 13:30 / 16:00 — 20:00</span></div><div class="contactItem"><b>Telefono</b><span>+39 366 108 7819</span></div><div class="contactItem"><b>WhatsApp</b><span><a href="https://wa.me/393661087819">Scrivici →</a></span></div></div></div></section>
+<section class="section" id="storia">
+  <div class="wrap">
+    <div class="story">
+      <div class="storyImage"><img src="assets/store-women.png" alt="Interno del negozio Flip&Co"></div>
+      <div class="storyText">
+        <div class="mono">05 / DAL 1986 · CAGLIARI DAL 2011</div>
+        <h2>Esperienza<br><em>che continua.</em></h2>
+        <p>Dal 1986 conosciamo il mondo dell'abbigliamento. Dal 2011 Flip&Co è a Cagliari, con una selezione attenta e un rapporto diretto con i clienti.</p>
+        <p>Il negozio non è solo un punto vendita: è il luogo in cui i brand diventano persone, look e storie reali.</p>
+        <div style="margin-top:18px"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Via+Italia+22,+Cagliari" target="_blank">Vieni a trovarci →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reputazione">
+  <div class="wrap">
+    <div class="sectionHead">
+      <div><div class="mono">06 / REPUTAZIONE</div><h2 class="sectionTitle">La differenza<br>si vede.<br><em>E si racconta.</em></h2></div>
+      <p class="sectionLead">Prima di venire puoi controllare le informazioni pubbliche del punto vendita, la posizione e le recensioni su Google.</p>
+    </div>
+    <div class="reputation">
+      <div>
+        <div class="mono">GOOGLE · FLIP&CO</div>
+        <div class="stars">★★★★★</div>
+        <div class="rating">4,2</div>
+        <p class="small">Valutazione mostrata sulla scheda pubblica Google fornita per il progetto · 41 recensioni.</p>
+      </div>
+      <div class="reviewCard">
+        <div><div class="mono" style="color:var(--acid)">CAGLIARI · VIA ITALIA 22</div><h3>Vieni a conoscerci<br>di persona.</h3><p>Un negozio si capisce davvero quando entri. Guarda dove siamo, apri le indicazioni oppure scrivici direttamente su WhatsApp.</p></div>
+        <div><a class="btn light" href="https://www.google.com/maps/search/?api=1&query=Via+Italia+22,+Cagliari" target="_blank">Apri Google Maps →</a> <a class="btn light" href="https://wa.me/393661087819" target="_blank">WhatsApp →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contatti">
+  <div class="wrap contactGrid">
+    <div>
+      <div class="mono">07 / CONTATTI · FLIP&CO</div>
+      <h2>Vieni.<br><em>Conosci.</em><br>Prova.</h2>
+      <p>Il modo migliore per conoscere Flip&Co è passare in negozio. Ti aspettiamo in Via Italia 22, Cagliari.</p>
+    </div>
+    <div class="contactList">
+      <div class="contactItem"><b>INDIRIZZO</b><span>Via Italia 22, Cagliari</span></div>
+      <div class="contactItem"><b>ORARI</b><span>Lun — Sab · 09:00 — 13:30 / 16:00 — 20:00</span></div>
+      <div class="contactItem"><b>TELEFONO</b><span><a href="tel:+393661087819">+39 366 108 7819</a></span></div>
+      <div class="contactItem"><b>WHATSAPP</b><span><a href="https://wa.me/393661087819" target="_blank">Scrivici →</a></span></div>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer><div class="wrap foot"><div><img src="assets/logo.png" alt="flip&co"><small>Abbigliamento uomo · donna · bambino<br>Cagliari · dal 1986</small></div><div class="footSocial"><span class="mono">CONTACT</span><a href="https://wa.me/393661087819">WhatsApp ↗</a><a href="tel:+393661087819">+39 366 108 7819</a></div><div class="legal">Via Italia 22, Cagliari<br>© 2026 flip&co · Tutti i diritti riservati</div></div></footer>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img class="footLogo" src="assets/logo.jpg" alt="flip&co"><small>Abbigliamento uomo · donna · bambino<br>Cagliari · dal 1986</small></div>
+      <div class="footSocial"><div class="mono">CONTACT</div><a href="https://wa.me/393661087819" target="_blank">WhatsApp ↗</a><a href="tel:+393661087819">+39 366 108 7819</a></div>
+      <div class="legal">Via Italia 22, Cagliari<br>© 2026 flip&co · Tutti i diritti riservati</div>
+    </div>
+    <div class="bottomBar"><span>FLIP&CO / MEDIABAY TEMPLATE</span><span>UOMO · DONNA · BAMBINO</span></div>
+  </div>
+</footer>
+
+<div class="mobileCta"><a href="https://wa.me/393661087819" target="_blank">WhatsApp</a><a href="https://www.google.com/maps/search/?api=1&query=Via+Italia+22,+Cagliari" target="_blank">Indicazioni</a></div>
 
 <script>
-const menuBtn=document.getElementById('menuBtn'),mega=document.getElementById('mega');
-menuBtn.addEventListener('click',()=>mega.classList.toggle('open'));
-mega.addEventListener('click',e=>{if(e.target===mega)mega.classList.remove('open')});
-mega.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mega.classList.remove('open')));
-document.querySelectorAll('.lang button').forEach(btn=>btn.addEventListener('click',()=>{
- document.querySelectorAll('.lang button').forEach(x=>x.classList.remove('active'));btn.classList.add('active');
-}));
+const menu=document.getElementById('menu'), overlay=document.getElementById('overlay');
+menu.addEventListener('click',()=>overlay.classList.toggle('open'));
+overlay.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>overlay.classList.remove('open')));
+
+const translations={
+  it:{
+    "hero-kicker":"Abbigliamento uomo · donna · bambino",
+    "hero-lead":"Brand selezionati, qualità e personalità. Dal 1986 scegliamo moda che parla alle persone, non solo alle stagioni."
+  },
+  en:{
+    "hero-kicker":"Men · women · kids clothing",
+    "hero-lead":"Selected brands, quality and personality. Since 1986, we choose fashion that speaks to people, not just seasons."
+  }
+};
+document.querySelectorAll('.lang button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.lang button').forEach(x=>x.classList.remove('active'));
+    btn.classList.add('active');
+    const lang=btn.dataset.lang;
+    document.querySelector('.kicker').textContent=translations[lang]["hero-kicker"];
+    document.querySelector('.heroBottom p').textContent=translations[lang]["hero-lead"];
+  });
+});
 </script>
 </body>
 </html>

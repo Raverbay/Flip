@@ -1,11 +1,15 @@
-# flip&co — MediaBay Template Derivative v1
+# flip&co — MediaBay Template V2
 
-Client-specific site derived from the MediaBay master layout.
+Versione client-specifica pronta per demo/presentazione e deployment statico.
 
-Client:
-- flip&co
-- Via Italia 22, Cagliari
-- +39 366 108 7819
-- WhatsApp enabled
+- Responsive desktop/tablet/mobile
+- Hero editoriale con immagini ad alta risoluzione fornite dal cliente
+- Lookbook, categorie, filosofia, brand, storia, reputazione e contatti
+- Menu overlay
+- CTA WhatsApp e Google Maps
+- IT/EN toggle per l'hero
+- Nessuna dipendenza esterna: HTML/CSS/JS + asset locali
+- Scroll nativo e movimento volutamente minimale
 
-The master structure is reused while the brand, content, imagery, categories and contact data are client-specific.
+## Deployment
+Pubblicare `index.html` e la cartella `assets/` come sito statico.
